@@ -9,6 +9,7 @@ root = Tk()
 root.title("Roy Calculator")
 
 expression = ""
+default_value = 0
 
 # Add function ...
 def add(value):
@@ -36,6 +37,15 @@ def calculate():
     label_result.config(text=result)
     label_Expresult.config(text=expression)
             
+def cal_sum(value):
+    global expression 
+    global default_value
+    sum_result = default_value + value
+    return sum_result
+
+
+
+
 # Create buttons ........
 
 label_result = Label(root, text="", width=20, background="black", foreground="cyan", anchor="e", font="Arial 20 bold")
@@ -89,7 +99,7 @@ button_0.grid(row=5, column=1)
 button_dot = Button(root, text=".", command=lambda: add("."))
 button_dot.grid(row=5, column=2)
 
-button_add = Button(root, text="+", command=lambda: add("+"))
+button_add = Button(root, text="+", command=lambda: cal_sum(int(label_result)))
 button_add.grid(row=5, column=3)
 
 button_equals = Button(root, text="=", width=50, command=lambda: calculate())
