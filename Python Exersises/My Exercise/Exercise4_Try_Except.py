@@ -2,7 +2,7 @@
 from io import SEEK_SET
 
 
-# open("This.txt")
+open("This.txt")
 
 try:
     open("This.txt")
