@@ -22,4 +22,4 @@ for step in range(5):
     print("DialoGPT: {}".format(tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)))
 
 
-    # check
+    # check ...
